@@ -1,0 +1,16 @@
+/*Body*/
+body {
+  background-color: lightblue;
+}
+
+/*Paragraph*/
+p {
+  color: navy;
+  margin-left: 20px;
+}
+
+/*Header 1*/
+h1 {
+  color: red;
+  margin-right: 20px; /*Not necessary*/
+}

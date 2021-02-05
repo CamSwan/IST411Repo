@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commission Form</title>
+
+  <!--Link to the Stylesheet-->
+  <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+  <h1>Commission Form</h1>
+
+  <p>If you would like a commission please fill out this form. I will get to work on your piece as soon as I can. Thank you so much for the support!</p>
+
+  <!--"for" binds element to id of input-->
+  <form action="javascript:submit();" >
+    <!--Name-->
+    <label for="name"><h4>Name:</h4></label>
+    <input type="text" id="name" name="name" placeholder="Your name..." required>
+    <br>
+
+    <!--Email-->
+    <label for="email"><h4>Email:</h4></label>
+    <input type="text" id="email" name="email" placeholder="Your email..." required>
+    <br>
+
+    <!--Colors-->
+    <label for="color"><h4>Number of colors:</h4></label>
+      <input type="radio" id="one" name="color" value="one">
+      <label for="one">1 color</label>
+      <input type="radio" id="two" name="color" value="two">
+      <label for="two">2 colors</label>
+      <input type="radio" id="three" name="color" value="three">
+      <label for="three">3 colors</label>
+      <input type="radio" id="four" name="color" value="four">
+      <label for="four">4+ colors</label>
+    <br>
+
+    <!--Size-->
+    <label for="size"><h4>Choose the size of the piece you want:</h4></label>
+      <select id="size" name="size">
+        <option value="portrait">Portrait</option>
+        <option value="half">Half Figure</option>
+        <option value="full">Full Figure</option>
+      </select>
+    <br>
+
+    <!--Request-->
+    <label for="request"><h4>Choose the types of piece you would like to recieve:</h4></label>
+    <br>
+    <div class="row">
+      <div class="column">
+        <label for="physical"><h5>Physical Pieces</h5></label>
+        <br>
+          <input type="checkbox" id="physical1" name="physical1" value="poster">
+          <label for="physical1">Poster</label> <!--on hover 18x24in-->
+          <br>
+          <input type="checkbox" id="physical2" name="physical2" value="sticker">
+          <label for="physical2">Sticker</label> <!--on hover 18x24in-->
+          <br>
+          <input type="checkbox" id="physical3" name="physical3" value="pin">
+          <label for="physical3">Pin</label> <!--on hover 18x24in-->
+        <br>
+      </div><!--End Column1-->
+      <div class="column">
+        <label for="digital"><h5>Digital Pieces</h5></label>
+        <br>
+          <input type="checkbox" id="digital1" name="digital1" value="pdf">
+          <label for="digital1">Pdf</label>
+          <br>
+          <input type="checkbox" id="digital2" name="digital2" value="png">
+          <label for="digital2">Png</label>
+          <br>
+          <input type="checkbox" id="digital3" name="digital3" value="gif">
+          <label for="digital3">Gif</label>
+        <br>
+      </div><!--End Column2-->
+    </div> <!--End Row-->
+    
+    <!--Message-->
+    <label for="msg"><h4>Insert a message:</h4></label>
+    <br> 
+    <textarea rows="5" cols="40" maxlength="100" placeholder="Leave an additional message..."></textarea>
+    <br>
+
+    <!--Submit-->
+    <input type="submit" value="Submit" > 
+  </form>
+</body>
+
+<!--Javascripting in html file-->
+<script>
+  function submit () {
+    var newname = document.getElementById("name").value;
+      alert("Thank you, "+ newname +", for your support. Your request has been submitted!")
+  }
+  </script>
+
+</html>
