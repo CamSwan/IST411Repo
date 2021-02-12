@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilbur Soot</title>
+
+  <!--Link to the Stylesheet-->
+  <link rel="stylesheet" href="LandingPage.css">
+
+</head>
+<body>
+  <h1>Wilbur Soot</h1>
+  <p>a very good Youtuber and Twitch streamer</p>
+  <br>
+  
+  <div class="FlexRow">
+    
+    <div class="FlexColumnLink" >
+      <h3>Link</h3>
+      <p>Follow 
+        <a href="https://www.youtube.com/channel/UC1n_PfsVqxllCcnMPlxBIjw">this link</a> 
+      to go to Wilbur's Youtube channel and follow him.</p>
+    </div>
+
+    <div class="FlexColumnImage" >
+      <h3>Image</h3>
+      <img src="Media/Wilbaby.jpg" alt="Picture of Wilbur Soot." width="250" height="250">
+    </div>
+
+    <div class="FlexColumnVideo" > 
+      <h3>Video</h3>
+      <video style="vertical-align: baseline" alt="Cat falling off chair."width="250"  controls>
+        <source src="Media\CatFall.mp4" type="video/mp4" >
+      </video>
+    </div>
+
+    <div class="FlexColumnGeo" > 
+      <h3>Geo Location</h3>
+      <button onclick="getLocation()">Find your location</button>
+      <br>
+      <p id='text'></p>
+    </div>
+
+  </div>
+  
+  <script>
+
+    var x = document.getElementById("text");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Your current latitude is " + position.coords.latitude + 
+      " and your longitude is " + position.coords.longitude + " which is probably pretty far from Wilbur Soot.";
+    }
+    </script>
+
+</body>
+</html>

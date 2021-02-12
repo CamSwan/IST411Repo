@@ -1,0 +1,66 @@
+
+body {
+  background-color: darkcyan;
+  padding: 1%;
+  color: white;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: .5px;
+}
+
+a{
+  color: purple;
+}
+
+.FlexRow{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.FlexColumnLink{
+  background-color: rgb(255, 203, 255);
+  flex: 20%;
+  padding: 10px;
+}
+.FlexColumnImage{
+  background-color: rgb(253, 108, 253);
+  flex: 20%;
+  padding: 10px;
+}
+.FlexColumnVideo{
+  background-color: rgb(255, 38, 255);
+  flex: 20%;
+  padding: 10px;
+}
+
+.FlexColumnGeo{
+  background-color: purple;
+  flex: 20%;
+  padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .FlexColumnLink, .FlexColumnImage, .FlexColumnVideo, .FlexColumnGeo {
+    flex: 50%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .FlexColumnLink, .FlexColumnImage, .FlexColumnVideo, .FlexColumnGeo {
+    flex-direction: column;
+  }
+}
