@@ -1,0 +1,86 @@
+body {
+  background-color: #1d1f1f;
+}
+p {
+  color: #ffffff;
+  border-style: solid;
+  border-color: #61DBFB;
+  border-radius: 5px;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 10px 2px;
+}
+Nav {
+  width: 100%;
+  height: 300px;
+}
+h1 {
+  color: white;
+  margin: 8px 0;
+}
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+.Left{
+  flex: 70%;
+  text-align: left;
+  padding: 10px;
+}
+.Right{
+  flex: 25%;
+  text-align: right;
+  padding: 10px;
+}
+.button {
+  background-color: #61DBFB;
+  color: #1d1f1f;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 75px;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: white;
+  color: #1d1f1f;
+}
+.Selection {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+}
+.Item {
+  flex: 30%;
+  padding: 10px;
+}
+.Footer {
+  width: 100%;
+}
+.mapouter{
+  position:relative;
+  text-align:center;
+  height:300px;
+  width: 70%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:300px;
+  width: 70%; 
+  border-radius: 5px;
+  margin: 8px 0;
+}
+@media (max-width: 600px) {
+  .Left, .Right {
+    flex: 60;
+    flex-direction: column;
+  }
+}

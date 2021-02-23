@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Clothes</title>
+
+  <!--Link to the Stylesheet-->
+  <link rel="stylesheet" href="ProductPage.css">
+
+</head>
+<body>
+  <div class="Nav">
+    <div class="Container">
+      <div class="Left">
+        <h1>Cozy Clothes</h1>
+      </div>
+  
+      <div class="Right">
+        <button class="button">Login</button>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <button class="button">Cart</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="Selection">
+      <div class="Item">
+        <h3>Hoodies</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/Hoodie.jpg" alt="Hoodie Collection" width="300" height="300">
+        </a> 
+      </div>
+
+      <div class="Item">
+        <h3>Jackets</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/Jacket.jpg" alt="Jacket Collection" width="300" height="300">
+        </a>
+      </div>
+
+      <div class="Item">
+        <h3>Cardigans</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/Cardigan.jpg" alt="Sweater Collection" width="300" height="300">
+        </a>
+      </div>
+
+      <div class="Item">
+        <h3>Sweaters</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/DesignSweater.jpg" alt="Sweater Collection" width="300" height="300">
+        </a>
+      </div>
+
+      <div class="Item">
+        <h3>Knit Sweaters</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/KnitSweater.jpg" alt="Knit Sweater Collection" width="300" height="300">
+        </a>
+      </div>
+
+      <div class="Item">
+        <h3>Ponchos</h3>
+        <a href="https://www.macys.com/shop/mens-clothing/hoodies-for-men?id=25995">
+          <img src="Media/Poncho.jpg" alt="Poncho Collection" width="300" height="300">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="Footer">
+    <div class="Container">
+      <div class="Left">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="900" height="300" id="gmap_canvas" src="https://www.google.com/maps/d/u/0/embed?mid=1FKp81uPry4IIUP6JY6r-B7M2pr4&msa=0&ie=UTF8&t=m&ll=40.75035115628579%2C-73.98771702117513&spn=0.004064%2C0.008572&z=19&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+          </div>
+        </div>
+      </div>
+  
+      <div class="Right">
+        <button class="button" onclick="myFunction()">About</button>
+        <p id="about"></p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function myFunction() {
+      document.getElementById("about").innerHTML = "We're here to help you find stylish and cozy clothes.";
+    }
+    </script>
+
+</body>
+</html>
