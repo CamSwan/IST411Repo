@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Organizer</title>
+
+  <link rel="stylesheet" href="ListOrganizer.css">
+  <script src="ListOrganizer.js"></script>
+
+</head>
+<body>
+  <div class="Row1">
+    <h1>List Organizer</h1> 
+    <hr>
+  </div>
+  
+  <div class="Row2">
+    <!--Task Form-->
+    <div class="Column1">
+      <h3>Type in your tasks and send them to the <i>List 1</i> or <i>List 2</i>.</h3>
+      <form name="listForm">
+        Task: <input type="text" name="task" value="" placeholder="To do ...">
+        <br>
+        List: <input type="number" name="list" value="" placeholder="Pick a list ...">
+        <br>
+        <input type="button" value="Add Task" onclick="AddTask()">
+      </form>      
+    </div>
+
+    <!--List 1-->
+    <div class="Column2">
+      <h3>List 1</h3>
+      <hr>
+      <br>
+      <table id="List1">
+        
+      </table>
+      <br>
+      <input type="button" value="Clear" onclick="ClearList1()">
+    </div>
+
+    <!--List 2-->
+    <div class="Column3">
+      <h3>List 2</h3>
+      <hr>
+      <br>
+      <table id="List2">
+
+      </table>
+      <br>
+      <input type="button" value="Clear" onclick="ClearList2()">
+    </div>
+  </div>
+ 
+</body>
+</html>
