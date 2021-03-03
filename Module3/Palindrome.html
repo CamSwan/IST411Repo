@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Organizer</title>
+
+  <link rel="stylesheet" href="Palindrome.css">
+  <script src="Palindrome.js"></script>
+
+</head>
+<body>
+  <div class="Row1">
+    <h1>Palindrome Checker</h1> 
+    <hr>
+  </div>
+  
+  <div class="Row2">
+    <!--Task Form-->
+    <div class="Column1">
+      <h3>Type in your word and check it with <i>Method 1</i> or <i>Method 2</i>.</h3>
+      <form name="wordForm">
+        Word: <input type="text" name="word" id= "str" value="">
+        <br>
+        Method: <input type="number" name="method" value="" placeholder="Pick a method ...">
+        <br>
+        <input type="button" value="Check" onclick="checkWord()">
+      </form>      
+    </div>
+
+    <!--List 1-->
+    <div class="Column2">
+      <h3>Method 1</h3>
+      <hr>
+      <br>
+      <table id="Method1">
+        
+      </table>
+      <br>
+      <input type="button" value="Clear" onclick="clearMethod1()">
+    </div>
+
+    <!--List 2-->
+    <div class="Column3">
+      <h3>Method 2</h3>
+      <hr>
+      <br>
+      <table id="Method2">
+
+      </table>
+      <br>
+      <input type="button" value="Clear" onclick="clearMethod2()">
+    </div>
+  </div>
+ 
+</body>
+</html>

@@ -1,0 +1,40 @@
+hr {
+  background-color: black;
+  width:100%; 
+  text-align:left;
+  margin-top: 0px; 
+  margin-bottom: 0px; 
+  margin-left:0;  
+  height: 10px;
+}
+.Row1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Row2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Column1 {
+  align-content: flex-start;
+  flex: 20%;
+  padding: 10px;
+}
+.Column2 {
+  align-content: center;
+  flex: 35%;
+  padding: 10px;
+}
+.Column3 {
+  align-content: center;
+  flex: 35%;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .Column1, .Column2, .Column3 {
+    flex: 90%;
+    flex-direction: column;
+  }
+}
