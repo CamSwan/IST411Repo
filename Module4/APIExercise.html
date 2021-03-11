@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Some Bacon</title>
+
+  <link rel="stylesheet" href="APIExercise.css">
+  
+</head>
+<body>
+  <div class="row">
+    <h1>Use APIs to Get Some Filler Text</h1>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <h2>Use the dropdown and button below to specify can call the text you want.</h2>
+      Select the number of Paragraphs you would like: 
+      <select id="par">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select> <br>
+
+      <input type="button" value="Get Text" onclick="getPar()">
+    </div>
+
+    <div class="column">
+      <h2>Raw Text</h2>
+      <p id="raw"> </p>
+    </div>
+
+    <div class="column">
+      <h2>Formatted Text</h2>
+      <p id="formatted"> </p>
+    </div>
+  </div>
+</body>
+
+<script src="APIExercise.js"></script>
+</html>
