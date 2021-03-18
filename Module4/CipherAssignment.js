@@ -56,7 +56,37 @@ async function getInfo() {
       document.getElementById("encrypted").innerHTML += "<p>" + NewJSONData[para] + "</p>";
     }
   }
-  /*
+  else {
+    var NewJSONData = [];
+
+    var newChar;
+    var newCharValue;
+
+    for (var para in jasonData){
+      var NewStr = "";
+
+      for (var Chara in jasonData[para]){
+        newChar = jasonData[para][Chara];
+        newCharValue = newChar.charCodeAt(0);
+        
+        if (newCharValue >= 65 && newCharValue <= 90){
+          newChar = String.fromCharCode(newCharValue + 13 - 26);          
+        }
+        else if (newCharValue >= 97 && newCharValue <= 122){
+          newChar = String.fromCharCode(newCharValue + 13 - 26);
+        }
+
+        NewStr += newChar;
+      }  //End for Char
+      NewJSONData.push (NewStr);
+    } //End for Para
+   
+    for (var para in NewJSONData){
+      document.getElementById("encrypted").innerHTML += "<p>" + NewJSONData[para] + "</p>";
+    }
+  }
+
+  /* COULD NOT GET THIS TO WORK BUT KEEPING IT FOR REFERNCE
   else {
     var NewJSONData = [];
     
