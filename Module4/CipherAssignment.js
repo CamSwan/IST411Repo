@@ -40,65 +40,26 @@ async function getInfo() {
         newChar = jasonData[para][Chara];
         newCharValue = newChar.charCodeAt(0);
         
-        //newChar = String.fromCharCode(newCharValue + 1);
-
         if (newCharValue >= 65 && newCharValue <= 90){
-          newChar = String.fromCharCode(newCharValue + 1);
-          NewStr += newChar;
-          NewJSONData.push (NewStr);
+          newChar = String.fromCharCode(newCharValue + 1);          
         }
-        
+        else if (newCharValue >= 97 && newCharValue <= 122){
+          newChar = String.fromCharCode(newCharValue + 1);
+        }
+
+        NewStr += newChar;
       }  //End for Char
-      
+      NewJSONData.push (NewStr);
     } //End for Para
    
-
     for (var para in NewJSONData){
       document.getElementById("encrypted").innerHTML += "<p>" + NewJSONData[para] + "</p>";
     }
   }
-    
-    /*var jasonData = function (str, amount) {
-      // Wrap the amount
-      if (amount < 0) {
-        return jasonData(str, amount + 26);
-      }
-    
-      // Make an output variable
-      var output = "";
-    
-      // Go through each character
-      for (var i = 0; i < str.length; i++) {
-        // Get the character we'll be appending
-        var c = str[i];
-    
-        // If it's a letter...
-        if (c.match(/[a-z]/i)) {
-          // Get its code
-          var code = str.charCodeAt(i);
-    
-          // Uppercase letters
-          if (code >= 65 && code <= 90) {
-            c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
-          }
-    
-          // Lowercase letters
-          else if (code >= 97 && code <= 122) {
-            c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
-          }
-        }
-    
-        // Append
-        output += c;
-      }
-    
-      // All done!
-      document.getElementById("encrypted").innerHTML += "<p>" + output + "</p>";
-    };
-  }
-
+  /*
   else {
-    var ceasarCipher = jasonData;
+    var NewJSONData = [];
+    
       let ceasarCipher = (str) => {
         let decoded = {
           a: 'n', b: 'o', c: 'p',
