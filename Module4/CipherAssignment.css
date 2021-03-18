@@ -1,0 +1,64 @@
+html{
+  margin: 30px;
+  background: #222222;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+}
+
+h1{
+  color: #00BFFF;
+}
+
+h3{
+  color: #00BFFF;
+}
+
+select{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+input{
+  background: #00BFFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columnI{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 30%;
+  box-align: center;
+}
+
+.column{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 20%;
+}
+
+p{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px){
+  .column{
+    flex: 100%;
+    flex-direction: column;
+  }
+  .columnI{
+    flex: 100%;
+    flex-direction: column;
+  }
+}

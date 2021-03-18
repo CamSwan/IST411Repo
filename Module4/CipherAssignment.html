@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CipherAssignment</title>
+  <link rel="stylesheet" href="CipherAssignment.css">
+</head>
+<body>
+  <!--Row1 Header-->
+  <div class="row">
+    <h1>Ceaser Cipher Assignment</h1>
+  </div>
+  
+  <!--Input Info-->
+  <div class="row">
+    <div class="columnI">
+      All meat or meat with filler? 
+      <select id="meat">
+        <option value="all-meat">All meat</option>
+        <option value="meat-and-filler">Meat and filler</option>
+      </select>
+    </div>
+
+    <div class="columnI">
+      How many paragraphs?
+      <select id="par">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+    
+    <div class="columnI">
+      What encryption method?
+      <select id="encrypt">
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select><br>
+      <input type="button" value="Submit" onclick="getInfo()"> 
+    </div>  
+  </div>
+
+  <!--Row2 Info-->
+  <div class="row">
+    <!--Raw-->
+    <div class="column">
+      <h3>Raw</h3>
+      <p id="raw"> </p>
+    </div>
+
+    <!--Formatted-->
+    <div class="column">
+      <h3>Formatted</h3>
+      <p id="formatted"> </p>
+    </div>
+
+    <!--Encrypted-->
+    <div class="column">
+      <h3>Encrypted</h3>
+      <p id="encrypted"> </p>
+    </div>
+  </div>
+
+</body>
+<script src="CipherAssignment.js"></script>
+</html>
