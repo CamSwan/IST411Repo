@@ -16,37 +16,38 @@ async function getInfo() {
   document.getElementById("formatted").innerHTML = "";
   document.getElementById("encrypted").innerHTML = "";
 
-  var jasonData = await response.json();
+  var jsonData = await response.json();
 
   //Raw text
-  document.getElementById("raw").innerHTML = JSON.stringify(jasonData);
+  document.getElementById("raw").innerHTML = JSON.stringify(jsonData);
 
   //Formatting text
-  for (var para in jasonData){
-    document.getElementById("formatted").innerHTML += "<p>" + jasonData[para] + "</p>";
+  for (var para in jsonData){
+    document.getElementById("formatted").innerHTML += "<p>" + jsonData[para] + "</p>";
   }
 
  //Encrypting text
   if (getEncrypt==1){
-    var NewJSONData = [];
+    var NewJSONData = []; 
 
     var newChar;
     var newCharValue;
 
-    for (var para in jasonData){
+    for (var para in jsonData){
       var NewStr = "";
 
-      for (var Chara in jasonData[para]){
-        newChar = jasonData[para][Chara];
+      for (var Chara in jsonData[para]){
+        newChar = jsonData[para][Chara];
         newCharValue = newChar.charCodeAt(0);
         
+        //looking for ASCII value of capitle
         if (newCharValue >= 65 && newCharValue <= 90){
           newChar = String.fromCharCode(newCharValue + 1);          
         }
+        //looking for ASCII value of lowerc
         else if (newCharValue >= 97 && newCharValue <= 122){
           newChar = String.fromCharCode(newCharValue + 1);
         }
-
         NewStr += newChar;
       }  //End for Char
       NewJSONData.push (NewStr);
@@ -56,27 +57,47 @@ async function getInfo() {
       document.getElementById("encrypted").innerHTML += "<p>" + NewJSONData[para] + "</p>";
     }
   }
-  else {
-    var NewJSONData = [];
+ 
+  else { 
+    //Dictionary 
+    let decoded = {
+      a: 'n', b: 'o', c: 'p',
+      d: 'q', e: 'r', f: 's',
+      g: 't', h: 'u', i: 'v',
+      j: 'w', k: 'x', l: 'y',
+      m: 'z', n: 'a', o: 'b',
+      p: 'c', q: 'd', r: 'e',
+      s: 'f', t: 'g', u: 'h',
+      v: 'i', w: 'j', x: 'k',
+      y: 'l', z: 'm',
+      //caps
+      A: 'N', B: 'O', C: 'P',
+      D: 'Q', E: 'R', F: 'S',
+      G: 'T', H: 'U', I: 'V',
+      J: 'W', K: 'X', L: 'Y',
+      M: 'Z', N: 'A', O: 'B',
+      P: 'C', Q: 'D', R: 'E',
+      S: 'F', T: 'G', U: 'H',
+      V: 'I', W: 'J', X: 'K',
+      Y: 'L', Z: 'M' 
+    }
+    var NewJSONData = []; 
 
     var newChar;
     var newCharValue;
 
-    for (var para in jasonData){
+    for (var para in jsonData){
       var NewStr = "";
 
-      for (var Chara in jasonData[para]){
-        newChar = jasonData[para][Chara];
-        newCharValue = newChar.charCodeAt(0);
+      for (var Chara in jsonData[para]){
+        newChar = jsonData[para][Chara];
         
-        if (newCharValue >= 65 && newCharValue <= 90){
-          newChar = String.fromCharCode(newCharValue + 13 - 26);          
+        if (newChar.match(/[a-z]/i)){
+          NewStr += decoded[newChar];
         }
-        else if (newCharValue >= 97 && newCharValue <= 122){
-          newChar = String.fromCharCode(newCharValue + 13 - 26);
+        else {
+          NewStr += newChar;
         }
-
-        NewStr += newChar;
       }  //End for Char
       NewJSONData.push (NewStr);
     } //End for Para
@@ -85,32 +106,5 @@ async function getInfo() {
       document.getElementById("encrypted").innerHTML += "<p>" + NewJSONData[para] + "</p>";
     }
   }
-
-  /* COULD NOT GET THIS TO WORK BUT KEEPING IT FOR REFERNCE
-  else {
-    var NewJSONData = [];
-    
-      let ceasarCipher = (str) => {
-        let decoded = {
-          a: 'n', b: 'o', c: 'p',
-          d: 'q', e: 'r', f: 's',
-          g: 't', h: 'u', i: 'v',
-          j: 'w', k: 'x', l: 'y',
-          m: 'z', n: 'a', o: 'b',
-          p: 'c', q: 'd', r: 'e',
-          s: 'f', t: 'g', u: 'h',
-          v: 'i', w: 'j', x: 'k',
-          y: 'l', z: 'm'
-        }
-        str = str.toLowerCase();
-
-        var decipher = "";
-        for(let i=0; i < str.length; i++){
-          decipher += decoded[str[i]];
-        }
-      }
-      document.getElementById("encrypted").innerHTML += "<p>" + decipher + "</p>";
-  }*/
-
   return true;
 }
