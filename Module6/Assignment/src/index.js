@@ -1,17 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import Select from 'react-select';
 import './index.css';
-
-
-//import App from './App';
-//import reportWebVitals from './reportWebVitals';
-
-// const options = [
-//   { label: "Protrait", value: "Protrait"},
-//   { label: "Half Figure", value: "Half Figure"},
-//   { label: "Full Figure", value: "Full Figure"},
-// ]
 
 class MyForm extends React.Component {
   constructor(props) {
