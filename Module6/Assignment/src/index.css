@@ -69,7 +69,7 @@ textarea{
   margin-bottom: 10px;
 }
 
-input[type=submit]{
+button{
   width: 100%;
   color: white;
   padding: 15px 32px;
