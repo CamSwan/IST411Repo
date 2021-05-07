@@ -110,7 +110,7 @@ class Game extends React.Component {
     if (winner) {
       status = 'Winner: ' + winner;
       if (this.state.gameOver){
-        status = status + '-> Game Over'
+        status = status + ' -> Game Over'
       }
     }
     else {
