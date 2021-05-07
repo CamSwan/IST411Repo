@@ -54,7 +54,8 @@ class Game extends React.Component {
         squares: Array(9).fill(null),
       }],
       stepNumber: 0,
-      xIsNext: true
+      xIsNext: true,
+      gameOver: false,
     };
   }//End constructor
 
@@ -62,6 +63,11 @@ class Game extends React.Component {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
+
+    if (calculateWinner(squares)){
+      this.setState({gameOver:true});
+      return;
+    }
 
     if (calculateWinner(squares) || squares[i]) {
       return;
@@ -87,7 +93,7 @@ class Game extends React.Component {
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const winner = calculateWinner(current.squares);
+    const winner = calculateWinner(current.squares); 
 
     const moves = history.map((step, move) => {
       const desc = move ?
@@ -103,8 +109,14 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = 'Winner: ' + winner;
+      if (this.state.gameOver){
+        status = status + '-> Game Over'
+      }
     }
     else {
+      // if (this.setState.squares.){
+      //   status = 'This spot is taken.'
+      // }
       status = 'Next player: ' + (this.state.xIsNext ? "A" : "B");
     }
 
